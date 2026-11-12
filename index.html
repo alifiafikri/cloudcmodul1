@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bali – Panduan Perjalanan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#f6f8f4; --surface:#e6eee4; --ink:#10281f; --muted:#4b6257; --line:#cbd8cb; --accent:#1f7a5a; --on-accent:#fff; --link:#0f6a4c;
+  box-sizing:border-box;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#09160f;--surface:#112419;--ink:#e8f2ec;--muted:#9db5a8;--line:#1f3a2a;--accent:#5fd3a5;--on-accent:#09160f;--link:#7fe0b8;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#09160f;--surface:#112419;--ink:#e8f2ec;--muted:#9db5a8;--line:#1f3a2a;--accent:#5fd3a5;--on-accent:#09160f;--link:#7fe0b8;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+
+/* Hero */
+.hero{position:relative;min-height:92vh;min-height:92svh;color:#fff;overflow:hidden;background:linear-gradient(180deg,#0b2f3a 0%,#146b68 40%,#e8a95b 78%,#ffd98f 100%);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.hero svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:62%}
+.hero .sun{animation:rise 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(80px);opacity:.2}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero .sun{animation:none}html{scroll-behavior:auto}}
+.hero nav{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:1.25rem;max-width:62rem;width:100%;margin:0 auto;gap:1rem;flex-wrap:wrap}
+.hero nav a{color:#fff;text-decoration:none;font-weight:600}
+.hero nav div a{margin-left:1.25rem;font-weight:400;opacity:.9}
+.hero nav a:hover{text-decoration:underline}
+.hero .wrap{position:relative;z-index:2;margin-top:clamp(2rem,8vh,5rem)}
+.hero h1{font-family:Syne,"Arial Black",system-ui,sans-serif;font-weight:800;font-size:clamp(4rem,18vw,10rem);line-height:.9;margin:0;letter-spacing:-.03em}
+.hero p{max-width:28rem;font-size:1.15rem;margin:1.5rem 0 0;text-shadow:0 1px 12px rgba(5,30,30,.6)}
+
+/* Konten */
+section{padding:4rem 0}
+h2{font-family:Syne,system-ui,sans-serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.1;margin:0 0 .6rem;letter-spacing:-.02em}
+.lead{color:var(--muted);max-width:36rem;margin:0 0 2.5rem}
+.places{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.5rem}
+.place{background:var(--surface);border-radius:1rem;overflow:hidden}
+.place .art{height:9rem;position:relative;overflow:hidden}
+.place .body{padding:1.25rem 1.25rem 1.5rem}
+.place h3{margin:0 0 .4rem;font-size:1.2rem}
+.place p{margin:0;color:var(--muted);font-size:.97rem}
+.place .art svg{display:block;width:100%;height:100%}
+
+.months{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+.m{padding:.8rem .4rem;text-align:center;border-radius:.5rem;background:var(--surface);color:var(--muted);font-size:.9rem}
+.m.best{background:var(--accent);color:var(--on-accent);font-weight:600}
+.legend{margin-top:1rem;color:var(--muted);font-size:.95rem}
+@media (max-width:30rem){.months{grid-template-columns:repeat(3,1fr)}}
+
+.tips{border-top:1px solid var(--line)}
+.tips ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem 2rem}
+.tips li{padding-left:1rem;border-left:3px solid var(--accent)}
+.tips strong{display:block}
+.tips span{color:var(--muted);font-size:.97rem}
+footer{padding:2.5rem 0;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+:root{padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+</head>
+<body>
+<div class="hero">
+  <nav aria-label="Navigasi utama">
+    <a href="#atas">Bali</a>
+    <div><a href="#tujuan">Tujuan</a><a href="#musim">Waktu terbaik</a><a href="#tips">Tips</a></div>
+  </nav>
+  <div class="wrap" id="atas">
+    <h1>Bali</h1>
+    <p>Pulau dengan sawah berundak, pura di tepi tebing, dan pantai yang bisa dinikmati sepanjang tahun.</p>
+  </div>
+  <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="glow"><stop offset="0" stop-color="#fff0b8" stop-opacity=".85"/><stop offset="1" stop-color="#ffd98f" stop-opacity="0"/></radialGradient>
+      <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#ffe9b8" stop-opacity=".45"/></linearGradient>
+      <g id="palm" fill="none" stroke="#051a13" stroke-linecap="round"><path d="M0 0Q12-70-6-135" stroke-width="7"/><path d="M-6-135Q-50-160-90-130M-6-135Q-40-185-85-175M-6-135Q-5-190 25-205M-6-135Q35-185 80-170M-6-135Q45-150 85-120M-6-135Q-70-125-75-95" stroke-width="5"/></g>
+    </defs>
+    <g class="sun"><circle cx="780" cy="215" r="190" fill="url(#glow)"/><circle cx="780" cy="215" r="58" fill="#fff4d0"/></g>
+    <path d="M-20 400V310L110 300L250 200L290 185L330 205L470 305L620 320V400Z" fill="#1c6a66" opacity=".55"/>
+    <path d="M900 400V320L1010 270L1070 240L1130 275L1220 300V400Z" fill="#1c6a66" opacity=".5"/>
+    <rect y="260" width="1200" height="140" fill="url(#mist)"/>
+    <path d="M0 400V285c120-35 220 5 340 20s200-30 320-20 180 30 300 10 160-30 240-10V400z" fill="#0f4d3a" opacity=".85"/>
+    <path d="M0 300c120-30 220 8 340 22s200-28 320-18 180 28 300 8 160-26 240-8" fill="none" stroke="#7fd8a8" stroke-opacity=".25" stroke-width="2"/>
+    <polygon fill="#08241b" points="600,400 600,310 622,310 622,280 646,280 646,250 670,250 670,220 694,220 694,190 730,190 730,400"/>
+    <polygon fill="#08241b" points="960,400 960,310 938,310 938,280 914,280 914,250 890,250 890,220 866,220 866,190 830,190 830,400"/>
+    <polygon fill="#08241b" points="706,190 730,150 730,190"/>
+    <polygon fill="#08241b" points="854,190 830,150 830,190"/>
+    <use href="#palm" transform="translate(190 400)"/>
+    <use href="#palm" transform="translate(1075 400) scale(.8)"/>
+    <path d="M0 400V325c150-30 260 10 400 0s260-30 400-10 280 20 400-5V400z" fill="#0a3326"/>
+    <path d="M0 340c150-28 260 10 400 0s260-28 400-8 280 18 400-4" fill="none" stroke="#5fd3a5" stroke-opacity=".25" stroke-width="2"/>
+    <path d="M0 400V362c200-25 330 15 520 0s420-25 680 5V400z" fill="#051a13"/>
+    <path d="M0 378c200-22 330 14 520 0s420-22 680 4" fill="none" stroke="#5fd3a5" stroke-opacity=".2" stroke-width="2"/>
+  </svg>
+</div>
+
+<main>
+  <section id="tujuan">
+    <div class="wrap">
+      <h2>Tiga tempat untuk dimulai</h2>
+      <p class="lead">Masing-masing mewakili sisi Bali yang berbeda: pegunungan, tebing, dan pulau di seberang.</p>
+      <div class="places">
+        <article class="place"><div class="art"><svg viewBox="0 0 300 144" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe6c8"/><stop offset="1" stop-color="#f2f6d2"/></linearGradient></defs><rect width="300" height="144" fill="url(#s1)"/><circle cx="60" cy="30" r="14" fill="#fff6c9"/><path d="M0 60Q80 30 160 55T300 45V144H0z" fill="#2f7f4b"/><path d="M0 80Q90 55 170 78T300 70V144H0z" fill="#4aa866"/><path d="M0 100Q100 78 180 98T300 92V144H0z" fill="#8cc56b"/><path d="M0 120Q110 102 190 118T300 114V144H0z" fill="#3f9b5d"/><path d="M0 135Q120 124 200 134T300 130V144H0z" fill="#1f6a3d"/><path d="M0 78Q90 53 170 76T300 68M0 98Q100 76 180 96T300 90M0 118Q110 100 190 116T300 112" fill="none" stroke="#e4f7e8" stroke-opacity=".55" stroke-width="1.5"/><g fill="none" stroke="#12351f" stroke-linecap="round"><path d="M250 100Q256 78 250 52" stroke-width="3"/><path d="M250 52Q232 44 220 54M250 52Q236 36 222 38M250 52Q252 34 264 30M250 52Q268 40 282 46M250 52Q266 58 276 66" stroke-width="2.5"/></g></svg></div><div class="body"><h3>Ubud dan Tegalalang</h3><p>Berjalan di antara sawah terasering, lalu mampir ke galeri seni dan pasar kerajinan.</p></div></article>
+        <article class="place"><div class="art"><svg viewBox="0 0 300 144" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe3a3"/><stop offset="1" stop-color="#f08a5d"/></linearGradient><linearGradient id="w2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e98a62"/><stop offset="1" stop-color="#14566f"/></linearGradient></defs><rect width="300" height="144" fill="url(#s2)"/><circle cx="205" cy="70" r="24" fill="#fff4d0"/><rect y="84" width="300" height="60" fill="url(#w2)"/><path d="M185 90h40M190 98h30M195 106h20M200 114h10" stroke="#fff4d0" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/><path d="M0 144V52l50-6 34 14 8 30-10 54z" fill="#2a2f3a"/><g fill="#1b1f29"><rect x="30" y="38" width="26" height="8"/><rect x="34" y="30" width="18" height="8"/><rect x="38" y="22" width="10" height="8"/><polygon points="43,8 49,22 37,22"/></g><path d="M92 134q8-6 16 0t16 0" stroke="#fff" stroke-opacity=".6" fill="none" stroke-width="2"/></svg></div><div class="body"><h3>Uluwatu</h3><p>Melihat Pura Luhur Uluwatu di atas tebing, lalu menonton tari kecak saat matahari terbenam.</p></div></article>
+        <article class="place"><div class="art"><svg viewBox="0 0 300 144" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdeef2"/><stop offset=".35" stop-color="#7fd6e0"/><stop offset=".36" stop-color="#1a8fb0"/><stop offset="1" stop-color="#0a5c7d"/></linearGradient></defs><rect width="300" height="144" fill="url(#s3)"/><ellipse cx="70" cy="22" rx="30" ry="7" fill="#fff" fill-opacity=".7"/><ellipse cx="95" cy="28" rx="22" ry="6" fill="#fff" fill-opacity=".7"/><ellipse cx="110" cy="118" rx="90" ry="22" fill="#6fd6e0" fill-opacity=".6"/><path d="M300 30L236 32Q214 38 204 56L192 68L184 80L180 96L186 112L198 144H300z" fill="#7a8f4a"/><path d="M300 60L250 64L222 82L212 110L222 144H300z" fill="#566f2e" fill-opacity=".7"/><path d="M300 30L236 32Q214 38 204 56L226 52 256 44 300 44z" fill="#9cb55a"/><path d="M198 144L186 112Q170 125 160 144z" fill="#f3e3b8"/><g transform="translate(70 100)"><polygon points="0,0 28,0 22,8 6,8" fill="#fff"/><polygon points="12,0 12,-14 22,0" fill="#fff" fill-opacity=".9"/></g><path d="M40 110q20 4 40 0M30 116q30 5 60 0" stroke="#fff" stroke-opacity=".5" fill="none" stroke-width="1.5"/></svg></div><div class="body"><h3>Nusa Penida</h3><p>Menyeberang dengan kapal cepat untuk melihat tebing Kelingking dan air laut yang biru jernih.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="musim" class="tips">
+    <div class="wrap">
+      <h2>Waktu terbaik berkunjung</h2>
+      <p class="lead">Musim kemarau biasanya cerah dan tidak terlalu lembap, tetapi juga paling ramai.</p>
+      <div class="months" role="list">
+        <div class="m" role="listitem">Jan</div><div class="m" role="listitem">Feb</div><div class="m" role="listitem">Mar</div>
+        <div class="m" role="listitem">Apr</div><div class="m best" role="listitem">Mei</div><div class="m best" role="listitem">Jun</div>
+        <div class="m best" role="listitem">Jul</div><div class="m best" role="listitem">Agu</div><div class="m best" role="listitem">Sep</div>
+        <div class="m" role="listitem">Okt</div><div class="m" role="listitem">Nov</div><div class="m" role="listitem">Des</div>
+      </div>
+      <p class="legend">Bulan berwarna hijau adalah perkiraan musim terbaik. Musim hujan tetap bisa dinikmati dengan harga yang biasanya lebih murah.</p>
+    </div>
+  </section>
+
+  <section id="tips" class="tips">
+    <div class="wrap">
+      <h2>Sebelum berangkat</h2>
+      <ul>
+        <li><strong>Berpakaian sopan di pura</strong><span>Pakai kain dan selendang. Banyak pura menyediakannya untuk dipinjam.</span></li>
+        <li><strong>Atur transportasi</strong><span>Sewa mobil dengan sopir lebih nyaman daripada menyetir sendiri di jalur padat.</span></li>
+        <li><strong>Periksa tanggal Nyepi</strong><span>Pada hari itu seluruh pulau sunyi dan bandara tutup. Cek kalender sebelum memesan tiket.</span></li>
+        <li><strong>Cek aturan terbaru</strong><span>Tarif masuk objek wisata dan pungutan wisatawan asing bisa berubah, lihat sumber resmi.</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Contoh situs statis. Informasi bersifat ilustrasi, periksa sumber resmi sebelum merencanakan perjalanan.</div>
+</footer>
+</body>
+</html>
